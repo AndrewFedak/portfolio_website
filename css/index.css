@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    background-color: white;
+    height: 120px;
+}
+.top_nav {
+    display: flex;
+}
+nav{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+nav  a{
+    color: black;
+}
+.top_nav .logo{
+    margin-left: 7%;
+    margin-right: 390px;
+    font-weight: bold;
+    font-size: 18pt;
+}
+.tags a{
+    padding-right: 40px;
+    font-size: 17pt;
+}
+main{
+    text-align: center;
+}
+.hire_buttons{
+    display: flex;
+    padding-right: 30px;
+}
+.hire{
+    background: url("../img/header_photo.jpg");
+    width: 100%;
+    height: 722px;
+}
+.hire h1{
+   padding-top: 190px;
+    padding-bottom: 35px;
+    color: white;
+    font-size: 79px;
+}
+.hire p{
+    font-size: 29px;
+    color: white;
+    padding-bottom: 110px;
+}
+.hire_buttons{
+    margin-left: 34%;
+}
+.hire_buttons a button{
+    margin-bottom: 100px;
+    width: 210px;
+    height: 73px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.service{
+    border: 3px white solid;
+    background-color: black;
+    opacity: 0.7;
+    margin-right: 30px;
+}
+.hiring{
+    border: 2px gray solid;
+    background-color: gray;
+    opacity: 0.9;
+}
+.hire a img{
+    margin-left:-35px;
+}
+
+
+
+
+.about_us{
+    padding-top: 150px;
+}
+.about_us .zagolovok{
+    margin-right: 30px;
+}
+.about_us h1{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.about_us p{
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+.about_us #about{
+    margin-right: 35px;
+}
+.about_us_icons {
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 125px;
+}
+.about_us_icons img{
+    margin-bottom: 40px;
+}
+
+
+
+
+.rectangle img{
+    width: 60px;
+    height: 60px;
+}
+.our_services{
+    width: 100%;
+    background-color: #e4fdf9;
+    padding-top: 110px;
+}
+.text_inform h1{
+    margin-bottom: 40px;
+    margin-right: 35px;
+    font-weight: 800;
+    font-size: 25px;
+}
+.text_inform p{
+    width: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.order_rectangles{
+    padding: 125px 50px 126px 162px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.rectangle{
+    width: 300px;
+    height: 350px;
+    background-color: #ffffff;
+    padding-top: 46px;
+    box-shadow: 0 0 3px #262626;
+    margin-top: 33px;
+}
+.rectangle h1{
+    font-size: 26px;
+    font-weight: bold;
+}
+.rectangle p{
+    font-size: 14px;
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.rectangle button{
+    width: 147px;
+    height: 50px;
+    border: 1px black solid;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+}
+.rectangle:hover{
+    transition: 0.2s;
+    background-color: #00897b;
+    color: white;
+}
+.rectangle button:hover{
+    transition: 0.2s;
+    color: white;
+    border: 2px white solid;
+    background-color: #00897b;
+}
+
+
+
+
+.latest_works{
+    background-color: #ffffff;
+}
+.inform_latest_works h1{
+    margin-right: 35px;
+    font-weight: bold;
+    font-size: 20pt;
+    padding-top: 100px;
+    padding-bottom: 38px;
+}
+.inform_latest_works p{
+    width: 50%;
+    font-size: 12pt;
+    margin-left: 25%;
+    padding-bottom: 118px;
+    font-weight: bold;
+}
+.latest_works_buttons_click{
+    transition: 0.3s;
+    color: white;
+    background: #00897b;
+}
+.latest_works_buttons button{
+    color: #504e4e;
+    padding: 10px 30px 10px 30px;
+    margin-right: 30px;
+}
+.latest_works button{
+    border: 2px #00897b solid;
+    font-size: 14pt;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.view_all{
+    width: 150px;
+    height: 50px;
+    background: #00897b;
+    color: white;
+    margin-bottom: 136px;
+}
+.works_slots{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 120px 115px 166px 145px;
+}
+.works_slots a{
+    margin-top: 30px;
+    text-decoration: none;
+}
+.watch{
+    background: url("../img/watches(1).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
+.health{
+    background: url("../img/health_pocket(2).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
+.pants{
+    background: url("../img/pants(3).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
+.flaga{
+    background: url("../img/flaga(4).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
+.wine{
+    background: url("../img/wine(5).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
+.bag{
+    background: url("../img/bag(6).jpg");
+    display: block;
+    width: 370px;
+    height: 370px;
+}
