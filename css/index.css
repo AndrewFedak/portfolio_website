@@ -224,7 +224,7 @@ main{
 }
 .works_slots{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
     padding: 120px 115px 166px 145px;
 }
 .works_slots a{
@@ -252,6 +252,7 @@ main{
 .bag{
     background: url("../img/latest_work_icons/bag(6).jpg");
 }
+
 
 
 
