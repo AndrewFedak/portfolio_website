@@ -99,7 +99,7 @@ main{
     margin: 0 auto;
 }
 .about_us #about{
-    margin-right: 35px;
+    margin-right: 50px;
 }
 .about_us_icons {
     margin-top: 130px;
@@ -185,7 +185,7 @@ main{
     background-color: #ffffff;
 }
 .inform_latest_works h1{
-    margin-right: 35px;
+    margin-right: 17px;
     font-weight: bold;
     font-size: 20pt;
     padding-top: 100px;
@@ -230,40 +230,86 @@ main{
 .works_slots a{
     margin-top: 30px;
     text-decoration: none;
+    display: block;
+    width: 370px;
+    height: 370px;
 }
 .watch{
-    background: url("../img/watches(1).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/watches(1).jpg");
 }
 .health{
-    background: url("../img/health_pocket(2).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/health_pocket(2).jpg");
 }
 .pants{
-    background: url("../img/pants(3).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/pants(3).jpg");
 }
 .flaga{
-    background: url("../img/flaga(4).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/flaga(4).jpg");
 }
 .wine{
-    background: url("../img/wine(5).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/wine(5).jpg");
 }
 .bag{
-    background: url("../img/bag(6).jpg");
-    display: block;
-    width: 370px;
-    height: 370px;
+    background: url("../img/latest_work_icons/bag(6).jpg");
 }
+
+
+
+.pricing_plan{
+    background: #f0f1f1;
+    padding: 125px 115px 125px 160px;
+}
+.pricing_plan .info_pricing_plan p{
+    width: 50%;
+    margin-left: 280px;
+    font-weight:400;
+}
+.pricing_plan .info_pricing_plan h1{
+     margin-right: 50px;
+     margin-bottom: 38px;
+ }
+.pricing_plan .info_pricing_plan{
+    margin-bottom: 110px;
+}
+.price_list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.pricing_plan .price_list a{
+    display: block;
+    width: 352px;
+    height: 641px;
+}
+.pricing_plan .price_list a:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+.free{
+    background: url("../img/price_rectangle/free.jpg");
+}
+.basic{
+    background: url("../img/price_rectangle/basic.jpg");
+}
+.ultimates{
+    background: url("../img/price_rectangle/ultimates.jpg");
+}
+.price_list a button{
+    border-radius: 1px;
+    width: 150px;
+    height: 55px;
+    border: 2px solid black;
+    color: black;
+    background: white;
+    margin-top: 548px;
+    font-size: 18px;
+    font-weight: 800;
+}
+.price_list a button:hover{
+    transition: 0.3s;
+    border: 2px solid #00897b;
+    border-radius: 3px;
+    color: white;
+    background: #00897b;
+    cursor: pointer;
+}
+
