@@ -1,10 +1,11 @@
 let lastWorksSlot = document.querySelectorAll(".works_slots a"),
     latestWorksButtons = document.querySelectorAll(".latest_works_buttons button"),
-    latestWorksSlots = document.querySelectorAll(".works_slots a");
-    // latestWorksButtonAll = document.querySelector(".latest_works_buttons .all"),
-    // latestWorksButtonWebDesign = document.querySelector(".latest_works_buttons .web_design"),
-    // latestWorksButtonDesign = document.querySelector(".latest_works_buttons .ui_ux_design"),
-    // latestWorksButtonMockups = document.querySelector(".latest_works_buttons .mockups");
+    latestWorksSlots = document.querySelectorAll(".works_slots a"),
+    membersImage = document.querySelectorAll(".team_members .member_image"),
+    memberName = document.querySelectorAll(".team_members .member h1"),
+    memberDescription = document.querySelectorAll(".team_members .member p"),
+    dots = document.querySelectorAll(".dot");
+
 
 for(let i = 0; i < lastWorksSlot.length; i++){
     if(i === 0) {
@@ -53,6 +54,7 @@ for(let i = 0; i < lastWorksSlot.length; i++){
         });
     }
 }
+
 for(let i = 0; i < latestWorksButtons.length; i++){
     latestWorksButtons[i].addEventListener("click",function () {
         latestWorksButtons.forEach(function(button){
@@ -94,5 +96,37 @@ for(let i = 0; i < latestWorksButtons.length; i++){
         }
     });
 }
+membersImage[0].style = "background: url('img/members/JohnDoe.png');";
+membersImage[1].style = "background: url('img/members/AlexaBiru.png');";
+membersImage[2].style = "background: url('img/members/RonobirSing.png');";
+dots[0].classList.add("active");
 
+function swapMember(n){
+    for(let i = 0; i < dots.length; i++)
+        dots[i].classList.remove("active");
+    if(n === 1){
+        membersImage[0].style = "background: url('img/members/JohnDoe.png'); transition: 0.3s ease";
+        membersImage[1].style = "background: url('img/members/AlexaBiru.png'); transition: 0.3s ease";
+        membersImage[2].style = "background: url('img/members/RonobirSing.png'); transition: 0.3s ease";
+        memberName[0].textContent = "John Doe";
+        memberName[1].textContent = "Alexa Biru";
+        memberName[2].textContent = "Ronobir Sing";
+        memberDescription[0].textContent = "General Manager";
+        memberDescription[1].textContent = "Office Director";
+        memberDescription[2].textContent = "Admin";
+        dots[0].classList.add("active");
+    }
+    if(n === 2){
+        membersImage[0].style = "background: url('img/members/JohnDoe.png'); transition: 0.3s ease";
+        membersImage[1].style = "background: url('img/members/AlexaBiru.png'); transition: 0.3s ease";
+        membersImage[2].style = "background: url('img/members/RonobirSing.png'); transition: 0.3s ease";
+        memberName[0].textContent = "Pukich";
+        memberName[1].textContent = "Kakich";
+        memberName[2].textContent = "Rackich";
+        memberDescription[0].textContent = "Staff";
+        memberDescription[1].textContent = "Ruiner";
+        memberDescription[2].textContent = "Blet";
+        dots[1].classList.add("active");
+    }
+}
 

@@ -83,6 +83,8 @@ main{
 
 
 
+
+
 .about_us{
     padding-top: 150px;
 }
@@ -110,6 +112,8 @@ main{
 .about_us_icons img{
     margin-bottom: 40px;
 }
+
+
 
 
 
@@ -177,6 +181,7 @@ main{
     border: 2px white solid;
     background-color: #00897b;
 }
+
 
 
 
@@ -314,3 +319,90 @@ main{
     cursor: pointer;
 }
 
+
+
+
+.team_members{
+    padding: 125px 15px 125px 15px;
+}
+.info_team_members P{
+    width: 50%;
+    margin: 50px auto 130px auto ;
+}
+.members{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+    margin-left: 25px;
+}
+.member_image{
+    display: block;
+    width:350px;
+    height: 340px;
+    margin-left: 65px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.social_icons a{
+    display:block;
+    width:53px;
+    height: 53px;
+    border-radius: 3px;
+}
+.social_icons{
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    padding-left: 138px;
+    padding-top: 20px;
+}
+.social_icons:first-child{
+    margin-left: 15px;
+}
+.facebook{
+    background: url("../img/social_icons/icon/facebook_icon.png");
+}
+.twitter{
+    background: url("../img/social_icons/icon/twitter_icon.png");
+}
+.dribbble{
+    background: url("../img/social_icons/icon/dribbble_icon.png");
+}
+.facebook:hover{
+    background: url("../img/social_icons/icon_hover/facebook_icon_hover.png");
+    transition: 0.3s ease;
+}
+.twitter:hover{
+    background: url("../img/social_icons/icon_hover/twitter_icon_hover.png");
+    transition: 0.3s ease;
+}
+.dribbble:hover{
+    background: url("../img/social_icons/icon_hover/dribbble_icon_hover.png");
+    transition: 0.3s ease;
+}
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background-color: #717171;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from{opacity: .4}
+    to{opacity: 1}
+}
+@keyframes fade {
+    from{opacity: .4}
+    to{opacity: 1}
+}
