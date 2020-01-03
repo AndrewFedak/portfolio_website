@@ -130,3 +130,5 @@ function swapMember(n){
     }
 }
 
+setInterval('swapMember(2)', 5000);
+setInterval('swapMember(1)', 10000);
