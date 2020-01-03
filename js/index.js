@@ -117,15 +117,15 @@ function swapMember(n){
         dots[0].classList.add("active");
     }
     if(n === 2){
-        membersImage[0].style = "background: url('img/members/JohnDoe.png'); transition: 0.3s ease";
-        membersImage[1].style = "background: url('img/members/AlexaBiru.png'); transition: 0.3s ease";
-        membersImage[2].style = "background: url('img/members/RonobirSing.png'); transition: 0.3s ease";
-        memberName[0].textContent = "Pukich";
-        memberName[1].textContent = "Kakich";
-        memberName[2].textContent = "Rackich";
-        memberDescription[0].textContent = "Staff";
-        memberDescription[1].textContent = "Ruiner";
-        memberDescription[2].textContent = "Blet";
+        membersImage[0].style = "background: url('img/members/MaxAlkhon.jpg'); transition: 0.3s ease";
+        membersImage[1].style = "background: url('img/members/AndrewFinda.jpg'); transition: 0.3s ease";
+        membersImage[2].style = "background: url('img/members/SteveReed.jpg'); transition: 0.3s ease";
+        memberName[0].textContent = "Max Alkhon";
+        memberName[1].textContent = "Andrew Finda";
+        memberName[2].textContent = "Steve Reed";
+        memberDescription[0].textContent = "Designer";
+        memberDescription[1].textContent = "Programmer";
+        memberDescription[2].textContent = "Architect";
         dots[1].classList.add("active");
     }
 }

@@ -280,6 +280,7 @@ main{
 .price_list{
     display: grid;
     grid-template-columns: auto auto auto;
+    margin-left: 5px;
 }
 .pricing_plan .price_list a{
     display: block;
