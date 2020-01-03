@@ -129,6 +129,9 @@ function swapMember(n){
         dots[1].classList.add("active");
     }
 }
+<<<<<<< HEAD
 
 setInterval('swapMember(2)', 5000);
 setInterval('swapMember(1)', 10000);
+=======
+>>>>>>> e7f4b0d884b576555cb25b55f2414a05c7a5a5bd
