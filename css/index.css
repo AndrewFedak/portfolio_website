@@ -10,6 +10,9 @@ header{
     background-color: white;
     height: 120px;
 }
+p{
+    font-weight: inherit;
+}
 .top_nav {
     display: flex;
 }
@@ -43,7 +46,7 @@ main{
     height: 722px;
 }
 .hire h1{
-   padding-top: 190px;
+    padding-top: 190px;
     padding-bottom: 35px;
     color: white;
     font-size: 79px;
@@ -54,7 +57,7 @@ main{
     padding-bottom: 110px;
 }
 .hire_buttons{
-    margin-left: 34%;
+    margin-left: 35.2%;
 }
 .hire_buttons a button{
     margin-bottom: 100px;
@@ -76,9 +79,6 @@ main{
     background-color: gray;
     opacity: 0.9;
 }
-.hire a img{
-    margin-left:-35px;
-}
 
 
 
@@ -88,26 +88,21 @@ main{
 .about_us{
     padding-top: 150px;
 }
-.about_us .zagolovok{
-    margin-right: 30px;
-}
 .about_us h1{
     font-size: 30px;
     margin-bottom: 40px;
 }
 .about_us p{
     font-size: 20px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
-}
-.about_us #about{
-    margin-right: 50px;
 }
 .about_us_icons {
     margin-top: 130px;
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 125px;
+    margin-left: 28px;
 }
 .about_us_icons img{
     margin-bottom: 40px;
@@ -129,19 +124,17 @@ main{
 }
 .text_inform h1{
     margin-bottom: 40px;
-    margin-right: 35px;
-    font-weight: 800;
     font-size: 25px;
 }
 .text_inform p{
     width: 50%;
     margin: 0 auto;
-    font-weight: bold;
 }
 .order_rectangles{
     padding: 125px 50px 126px 162px;
     display: grid;
     grid-template-columns: auto auto auto;
+    margin-left: 22px;
 }
 .rectangle{
     width: 300px;
@@ -153,7 +146,6 @@ main{
 }
 .rectangle h1{
     font-size: 26px;
-    font-weight: bold;
 }
 .rectangle p{
     font-size: 14px;
@@ -190,8 +182,6 @@ main{
     background-color: #ffffff;
 }
 .inform_latest_works h1{
-    margin-right: 17px;
-    font-weight: bold;
     font-size: 20pt;
     padding-top: 100px;
     padding-bottom: 38px;
@@ -201,17 +191,20 @@ main{
     font-size: 12pt;
     margin-left: 25%;
     padding-bottom: 118px;
-    font-weight: bold;
 }
 .latest_works_buttons_click{
     transition: 0.3s;
     color: white;
     background: #00897b;
 }
+
 .latest_works_buttons button{
     color: #504e4e;
     padding: 10px 30px 10px 30px;
     margin-right: 30px;
+}
+.latest_works_buttons{
+    margin-left: 45px;
 }
 .latest_works button{
     border: 2px #00897b solid;
@@ -226,11 +219,12 @@ main{
     background: #00897b;
     color: white;
     margin-bottom: 136px;
+    margin-left: 1px;
 }
 .works_slots{
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    padding: 120px 115px 166px 145px;
+    padding: 120px 50px 166px 145px;
 }
 .works_slots a{
     margin-top: 30px;
@@ -257,6 +251,30 @@ main{
 .bag{
     background: url("../img/latest_work_icons/bag(6).jpg");
 }
+.watch:hover{
+    background: url("../img(hover)/watches(1)(hover).jpg");
+    transition: 0.3s ease;
+}
+.health:hover{
+    background: url("../img(hover)/health_pocket(2)(hover).jpg");
+    transition: 0.3s ease;
+}
+.pants:hover{
+    background: url("../img(hover)/pants(3)(hover).jpg");
+    transition: 0.3s ease;
+}
+.flaga:hover{
+    background: url("../img(hover)/flaga(4)(hover).jpg");
+    transition: 0.3s ease;
+}
+.wine:hover{
+    background: url("../img(hover)/wine(5)(hover).jpg");
+    transition: 0.3s ease;
+}
+.bag:hover{
+    background: url("../img(hover)/bag(6)(hover).jpg");
+    transition: 0.3s ease;
+}
 
 
 
@@ -268,10 +286,9 @@ main{
 .pricing_plan .info_pricing_plan p{
     width: 50%;
     margin-left: 280px;
-    font-weight:400;
 }
 .pricing_plan .info_pricing_plan h1{
-     margin-right: 50px;
+     margin-right: 42px;
      margin-bottom: 38px;
  }
 .pricing_plan .info_pricing_plan{
@@ -280,7 +297,7 @@ main{
 .price_list{
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 5px;
+    margin-left: 13.7px;
 }
 .pricing_plan .price_list a{
     display: block;
@@ -324,7 +341,7 @@ main{
 
 
 .team_members{
-    padding: 125px 15px 125px 15px;
+    padding: 125px 0 125px 15px;
 }
 .info_team_members P{
     width: 50%;
@@ -334,13 +351,15 @@ main{
     display:grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 30px;
-    margin-left: 25px;
+}
+.member{
+    margin-left: 1px;
 }
 .member_image{
     display: block;
     width:350px;
     height: 340px;
-    margin-left: 65px;
+    margin-left: 14.5%;
     border-radius: 6px;
     margin-bottom: 20px;
 }
@@ -352,12 +371,10 @@ main{
 }
 .social_icons{
     display: grid;
-    grid-template-columns: 75px 75px 75px;
+    grid-template-columns: 19% 19% 19%;
     padding-left: 138px;
     padding-top: 20px;
-}
-.social_icons:first-child{
-    margin-left: 15px;
+    margin-left: 3.7%;
 }
 .facebook{
     background: url("../img/social_icons/icon/facebook_icon.png");
@@ -390,6 +407,7 @@ main{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
 .active, .dot:hover{
     background-color: #717171;
 }
@@ -406,4 +424,25 @@ main{
 @keyframes fade {
     from{opacity: .4}
     to{opacity: 1}
+}
+
+
+
+
+
+.blog{
+    background:#e4fdf9;
+    padding: 100px 0 100px 0;
+}
+.blog_info p{
+    width: 60%;
+    margin: 20px auto 100px auto;
+}
+.blog_block{
+     display:grid;
+     grid-template-columns: 54% 46%;
+     margin-top: 20px;
+}
+.left .content h1{
+
 }
