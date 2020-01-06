@@ -12,6 +12,7 @@ header{
 }
 p{
     font-weight: inherit;
+    font-size: 18px;
 }
 .top_nav {
     display: flex;
@@ -93,7 +94,6 @@ main{
     margin-bottom: 40px;
 }
 .about_us p{
-    font-size: 20px;
     width: 70%;
     margin: 0 auto;
 }
@@ -131,10 +131,10 @@ main{
     margin: 0 auto;
 }
 .order_rectangles{
-    padding: 125px 50px 126px 162px;
+    padding: 125px 0 126px 157px;
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 22px;
+
 }
 .rectangle{
     width: 300px;
@@ -143,35 +143,27 @@ main{
     padding-top: 46px;
     box-shadow: 0 0 3px #262626;
     margin-top: 33px;
+    color: #5c5c5c;
 }
 .rectangle h1{
     font-size: 26px;
 }
 .rectangle p{
-    font-size: 14px;
+    font-size: 17px;
     width: 80%;
     margin-left: 30px;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .rectangle button{
     width: 147px;
     height: 50px;
-    border: 1px black solid;
+    border: 2px #00897b solid;
+    color: #5c5c5c;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 19px;
     cursor: pointer;
-}
-.rectangle:hover{
-    transition: 0.2s;
-    background-color: #00897b;
-    color: white;
-}
-.rectangle button:hover{
-    transition: 0.2s;
-    color: white;
-    border: 2px white solid;
-    background-color: #00897b;
+    background: white;
 }
 
 
@@ -188,7 +180,6 @@ main{
 }
 .inform_latest_works p{
     width: 50%;
-    font-size: 12pt;
     margin-left: 25%;
     padding-bottom: 118px;
 }
@@ -279,13 +270,16 @@ main{
 
 
 
+
+
 .pricing_plan{
     background: #f0f1f1;
     padding: 125px 115px 125px 160px;
 }
 .pricing_plan .info_pricing_plan p{
     width: 50%;
-    margin-left: 280px;
+    margin: 0 auto;
+    padding-right: 47px;
 }
 .pricing_plan .info_pricing_plan h1{
      margin-right: 42px;
@@ -340,6 +334,8 @@ main{
 
 
 
+
+
 .team_members{
     padding: 125px 0 125px 15px;
 }
@@ -353,7 +349,7 @@ main{
     margin-bottom: 30px;
 }
 .member{
-    margin-left: 1px;
+    margin-left: 5px;
 }
 .member_image{
     display: block;
@@ -430,19 +426,53 @@ main{
 
 
 
+
 .blog{
     background:#e4fdf9;
-    padding: 100px 0 100px 0;
+    padding: 100px 67px 100px 80px;
 }
 .blog_info p{
     width: 60%;
     margin: 20px auto 100px auto;
 }
 .blog_block{
-     display:grid;
-     grid-template-columns: 54% 46%;
-     margin-top: 20px;
+     display:flex;
+     margin-top: 50px;
 }
-.left .content h1{
-
+.blog_block .content{
+    margin-left: 50px;
+    text-align: left;
+}
+.blog_block .content h1{
+    margin-top: 50px;
+    font-size: 23px;
+    color: #00897b;
+}
+.blog_block .main_img{
+    border-radius: 8px;
+    width:800px;
+    height:400px;
+    display: block;
+}
+.date_and_genre{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.date_and_genre p:first-child{
+    margin-right: 60px;
+}
+.blog_block .short_description{
+    width: 70%;
+}
+.more_view{
+    width: 180px;
+    height: 60px;
+    font-size: 10px;
+    color: white;
+    border: 2px #5c5c5c solid;
+    background: #5c5c5c;
+    border-radius: 3px;
+    margin-top: 100px;
+    cursor: pointer;
 }

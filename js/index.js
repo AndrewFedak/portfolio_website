@@ -1,10 +1,27 @@
-let lastWorksSlot = document.querySelectorAll(".works_slots a"),
-    latestWorksButtons = document.querySelectorAll(".latest_works_buttons button"),
+let latestWorksButtons = document.querySelectorAll(".latest_works_buttons button"),
     latestWorksSlots = document.querySelectorAll(".works_slots a"),
+    servicesReactangles = document.querySelectorAll(".rectangle"),
+    servicesButtons = document.querySelectorAll(".read_more"),
     membersImage = document.querySelectorAll(".team_members .member_image"),
     memberName = document.querySelectorAll(".team_members .member h1"),
     memberDescription = document.querySelectorAll(".team_members .member p"),
     dots = document.querySelectorAll(".dot");
+
+
+
+
+for(let i = 0; i < servicesReactangles.length; i++){
+    servicesButtons[i].addEventListener("mouseover", function () {
+        servicesButtons[i].style = "transition: 0.2s; color: white;border: 2px white solid; background-color: #00897b";
+        servicesReactangles[i].style = "transition: 0.2s; background-color: #00897b; color: white";
+    });
+    servicesButtons[i].addEventListener("mouseout", function () {
+        servicesButtons[i].style = "transition: 0.2s; border: 2px #00897b solid; color: #5c5c5c; background; white";
+        servicesReactangles[i].style = "transition: 0.2s; background-color: #ffffff;color: #5c5c5c";
+    });
+}
+
+
 
 
 for(let i = 0; i < latestWorksButtons.length; i++){
@@ -48,6 +65,8 @@ for(let i = 0; i < latestWorksButtons.length; i++){
         }
     });
 }
+
+
 
 membersImage[0].style = "background: url('img/members/JohnDoe.png');";
 membersImage[1].style = "background: url('img/members/AlexaBiru.png');";
