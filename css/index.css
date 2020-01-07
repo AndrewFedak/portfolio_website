@@ -5,18 +5,15 @@
 a{
     text-decoration: none;
 }
-header{
+header {
     width: 100%;
     background-color: white;
-    height: 120px;
 }
 p{
     font-weight: inherit;
     font-size: 18px;
 }
-.top_nav {
-    display: flex;
-}
+
 nav{
     margin-top: 40px;
     margin-bottom: 40px;
@@ -24,14 +21,26 @@ nav{
 nav  a{
     color: black;
 }
+.info h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.info p{
+    font-size: 18px;
+    width: 50%;
+    margin: 0 auto;
+}
+.top_nav {
+     display: flex;
+ }
 .top_nav .logo{
     margin-left: 7%;
-    margin-right: 390px;
+    margin-right: auto;
     font-weight: bold;
     font-size: 18pt;
 }
 .tags a{
-    padding-right: 40px;
+    margin-right: 40px;
     font-size: 17pt;
 }
 main{
@@ -43,11 +52,12 @@ main{
 }
 .hire{
     background: url("../img/header_photo.jpg");
-    width: 100%;
-    height: 722px;
+    width: auto;
+    padding: 170px 0 70px 0;
+    background-size: cover !important;
+    position: relative;
 }
 .hire h1{
-    padding-top: 190px;
     padding-bottom: 35px;
     color: white;
     font-size: 79px;
@@ -57,17 +67,19 @@ main{
     color: white;
     padding-bottom: 110px;
 }
-.hire_buttons{
-    margin-left: 35.2%;
-}
-.hire_buttons a button{
-    margin-bottom: 100px;
+
+.hire_buttons a{
+    display: inline-block;
     width: 210px;
-    height: 73px;
+    height: 50px;
     cursor: pointer;
     color: white;
     font-size: 20px;
     font-weight: bold;
+}
+.hire_buttons{
+    margin-left: 27px;
+    display: block;
 }
 .service{
     border: 3px white solid;
@@ -80,6 +92,12 @@ main{
     background-color: gray;
     opacity: 0.9;
 }
+.service, .hiring{
+    padding-top: 20px;
+}
+.hire a img{
+    margin-top: 70px;
+}
 
 
 
@@ -87,25 +105,22 @@ main{
 
 
 .about_us{
-    padding-top: 150px;
+    padding: 130px 50px 120px 60px;
 }
-.about_us h1{
-    font-size: 30px;
-    margin-bottom: 40px;
-}
-.about_us p{
-    width: 70%;
-    margin: 0 auto;
-}
+
 .about_us_icons {
     margin-top: 130px;
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 125px;
-    margin-left: 28px;
+    margin-left: 2.5%;
 }
-.about_us_icons img{
-    margin-bottom: 40px;
+.about_us_icons p{
+    width: 67%;
+    margin: 0 auto;
+}
+.about_us_icons h1{
+    margin: 20px 0 20px 0;
 }
 
 
@@ -113,29 +128,21 @@ main{
 
 
 
-.rectangle img{
-    width: 60px;
-    height: 60px;
-}
+
 .our_services{
     width: 100%;
     background-color: #e4fdf9;
     padding-top: 110px;
 }
-.text_inform h1{
-    margin-bottom: 40px;
-    font-size: 25px;
-}
-.text_inform p{
-    width: 50%;
-    margin: 0 auto;
-}
 .order_rectangles{
     padding: 125px 0 126px 157px;
     display: grid;
     grid-template-columns: auto auto auto;
-
 }
+.rectangle img{
+     width: 60px;
+     height: 60px;
+ }
 .rectangle{
     width: 300px;
     height: 350px;
@@ -151,9 +158,7 @@ main{
 .rectangle p{
     font-size: 17px;
     width: 80%;
-    margin-left: 30px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin:20px 0 40px 30px;
 }
 .rectangle button{
     width: 147px;
@@ -172,27 +177,21 @@ main{
 
 .latest_works{
     background-color: #ffffff;
+    padding: 120px 60px 120px 60px;
 }
-.inform_latest_works h1{
-    font-size: 20pt;
-    padding-top: 100px;
-    padding-bottom: 38px;
-}
-.inform_latest_works p{
-    width: 50%;
-    margin-left: 25%;
-    padding-bottom: 118px;
+.latest_works_info p{
+    margin-bottom: 118px;
 }
 .latest_works_buttons_click{
     transition: 0.3s;
     color: white;
     background: #00897b;
 }
-
 .latest_works_buttons button{
     color: #504e4e;
     padding: 10px 30px 10px 30px;
-    margin-right: 30px;
+    margin-right: 1%;
+    margin-top: 1%;
 }
 .latest_works_buttons{
     margin-left: 45px;
@@ -209,13 +208,12 @@ main{
     height: 50px;
     background: #00897b;
     color: white;
-    margin-bottom: 136px;
     margin-left: 1px;
 }
 .works_slots{
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    padding: 120px 50px 166px 145px;
+    padding: 70px 50px 100px 90px;
 }
 .works_slots a{
     margin-top: 30px;
@@ -274,24 +272,20 @@ main{
 
 .pricing_plan{
     background: #f0f1f1;
-    padding: 125px 115px 125px 160px;
+    padding: 125px 40px 125px 80px;
 }
-.pricing_plan .info_pricing_plan p{
-    width: 50%;
-    margin: 0 auto;
-    padding-right: 47px;
-}
-.pricing_plan .info_pricing_plan h1{
+
+.pricing_plan .pricing_plan_info h1{
      margin-right: 42px;
      margin-bottom: 38px;
  }
-.pricing_plan .info_pricing_plan{
+.pricing_plan .pricing_plan_info{
     margin-bottom: 110px;
 }
 .price_list{
     display: grid;
     grid-template-columns: auto auto auto;
-    margin-left: 13.7px;
+    margin-left: 3.8%;
 }
 .pricing_plan .price_list a{
     display: block;
@@ -300,7 +294,7 @@ main{
 }
 .pricing_plan .price_list a:hover{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 .free{
     background: url("../img/price_rectangle/free.jpg");
@@ -337,16 +331,14 @@ main{
 
 
 .team_members{
-    padding: 125px 0 125px 15px;
+    padding: 125px 15px 125px 15px;
 }
-.info_team_members P{
-    width: 50%;
-    margin: 50px auto 130px auto ;
-}
+
 .members{
     display:grid;
     grid-template-columns: auto auto auto;
-    margin-bottom: 30px;
+
+    margin: 30px 0;
 }
 .member{
     margin-left: 5px;
@@ -368,7 +360,7 @@ main{
 .social_icons{
     display: grid;
     grid-template-columns: 19% 19% 19%;
-    padding-left: 138px;
+    padding-left: 135px;
     padding-top: 20px;
     margin-left: 3.7%;
 }
@@ -403,7 +395,6 @@ main{
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover{
     background-color: #717171;
 }
@@ -432,7 +423,7 @@ main{
     padding: 100px 67px 100px 80px;
 }
 .blog_info p{
-    width: 60%;
+    width: 70%;
     margin: 20px auto 100px auto;
 }
 .blog_block{
@@ -440,8 +431,9 @@ main{
      margin-top: 50px;
 }
 .blog_block .content{
-    margin-left: 50px;
+    margin-left: auto;
     text-align: left;
+    width: 50%;
 }
 .blog_block .content h1{
     margin-top: 50px;
@@ -450,9 +442,8 @@ main{
 }
 .blog_block .main_img{
     border-radius: 8px;
-    width:800px;
+    width:650px;
     height:400px;
-    display: block;
 }
 .date_and_genre{
     display: flex;
@@ -463,7 +454,7 @@ main{
     margin-right: 60px;
 }
 .blog_block .short_description{
-    width: 70%;
+    width: auto;
 }
 .more_view{
     width: 180px;
@@ -475,4 +466,15 @@ main{
     border-radius: 3px;
     margin-top: 100px;
     cursor: pointer;
+}
+
+
+
+
+.contact_us{
+    background: url("../img/footer/contuct_us_bg.png");
+    width: auto;
+    padding: 100px 160px 100px 160px;
+    background-size: cover !important;
+    position: relative;
 }
