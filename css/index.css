@@ -533,6 +533,17 @@ main{
 }
 
 
+
+.top_arrow{
+    position: fixed;
+    right: 7px;
+    bottom: 60px;
+    width: 55px;
+    height: 60px;
+    cursor:pointer;
+    /*display: none;*/
+}
+
 footer{
     background: white;
     width: 100%;
