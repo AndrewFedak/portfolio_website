@@ -1,23 +1,21 @@
 let latestWorksButtons = document.querySelectorAll(".latest_works_buttons button"),
     latestWorksSlots = document.querySelectorAll(".works_slots a"),
-    servicesReactangles = document.querySelectorAll(".rectangle"),
+    servicesRectangles = document.querySelectorAll(".rectangle"),
     servicesButtons = document.querySelectorAll(".read_more"),
-    membersImage = document.querySelectorAll(".team_members .member_image"),
-    memberName = document.querySelectorAll(".team_members .member h1"),
-    memberDescription = document.querySelectorAll(".team_members .member p"),
-    dots = document.querySelectorAll(".dot");
+    memberBlock = document.querySelectorAll(".member"),
+    dots = document.querySelectorAll(".dot"),
+    scrollTop = document.querySelector(".top_arrow");
 
 
 
-
-for(let i = 0; i < servicesReactangles.length; i++){
+for(let i = 0; i < servicesRectangles.length; i++){
     servicesButtons[i].addEventListener("mouseover", function () {
         servicesButtons[i].style = "transition: 0.2s; color: white;border: 2px white solid; background-color: #00897b";
-        servicesReactangles[i].style = "transition: 0.2s; background-color: #00897b; color: white";
+        servicesRectangles[i].style = "transition: 0.2s; background-color: #00897b; color: white";
     });
     servicesButtons[i].addEventListener("mouseout", function () {
         servicesButtons[i].style = "transition: 0.2s; border: 2px #00897b solid; color: #5c5c5c; background; white";
-        servicesReactangles[i].style = "transition: 0.2s; background-color: #ffffff;color: #5c5c5c";
+        servicesRectangles[i].style = "transition: 0.2s; background-color: #ffffff;color: #5c5c5c";
     });
 }
 
@@ -68,38 +66,81 @@ for(let i = 0; i < latestWorksButtons.length; i++){
 
 
 
-membersImage[0].style = "background: url('img/members/JohnDoe.png');";
-membersImage[1].style = "background: url('img/members/AlexaBiru.png');";
-membersImage[2].style = "background: url('img/members/RonobirSing.png');";
-dots[0].classList.add("active");
-function swapMember(n){
-    for(let i = 0; i < dots.length; i++)
-        dots[i].classList.remove("active");
-    if(n === 1){
-        membersImage[0].style = "background: url('img/members/JohnDoe.png'); transition: 0.3s ease";
-        membersImage[1].style = "background: url('img/members/AlexaBiru.png'); transition: 0.3s ease";
-        membersImage[2].style = "background: url('img/members/RonobirSing.png'); transition: 0.3s ease";
-        memberName[0].textContent = "John Doe";
-        memberName[1].textContent = "Alexa Biru";
-        memberName[2].textContent = "Ronobir Sing";
-        memberDescription[0].textContent = "General Manager";
-        memberDescription[1].textContent = "Office Director";
-        memberDescription[2].textContent = "Admin";
-        dots[0].classList.add("active");
+
+scrollTop.addEventListener("click", function () {
+    window.scrollTo(0,0);                                       //доробити
+});
+
+
+
+
+
+// function swapMember(n){
+//     for(let i = 0; i < dots.length; i++)
+//         dots[i].classList.remove("active");
+//     if(n === 1){
+//
+//         dots[0].classList.add("active");
+//     }
+//     if(n === 2){
+//
+//         dots[1].classList.add("active");
+//     }
+// }
+// setInterval('swapMember(2)', 5000);
+// setInterval('swapMember(1)', 10000);
+
+
+
+
+function swapMembersWithTwoDots(i) {
+    for (let m = 0; m < memberBlock.length; m++)
+        memberBlock[m].style = "display:none;";
+    if (i === 0) {
+        for (let k = 0; k < 3; k++)
+            memberBlock[k].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[i].classList.add("active");
     }
-    if(n === 2){
-        membersImage[0].style = "background: url('img/members/MaxAlkhon.jpg'); transition: 0.3s ease";
-        membersImage[1].style = "background: url('img/members/AndrewFinda.jpg'); transition: 0.3s ease";
-        membersImage[2].style = "background: url('img/members/SteveReed.jpg'); transition: 0.3s ease";
-        memberName[0].textContent = "Max Alkhon";
-        memberName[1].textContent = "Andrew Finda";
-        memberName[2].textContent = "Steve Reed";
-        memberDescription[0].textContent = "Designer";
-        memberDescription[1].textContent = "Programmer";
-        memberDescription[2].textContent = "Architect";
-        dots[1].classList.add("active");
+    if (i === 1) {
+        for (let k = 3; k < 6; k++)
+            memberBlock[k].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[i].classList.add("active");
     }
 }
-setInterval('swapMember(2)', 5000);
-setInterval('swapMember(1)', 10000);
 
+
+
+if (document.documentElement.clientWidth > 1000) {
+    for (let j = 0; j < memberBlock.length; j++) {
+        memberBlock[j].style = "display:none;";
+    }
+    for (let k = 0; k < 3; k++) {
+        memberBlock[k].style = "display:block";
+    }
+    dots[0].classList.add("active");
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function () {
+            for (let m = 0; m < memberBlock.length; m++)
+                memberBlock[m].style = "display:none;";
+            if (i === 0) {
+                swapMembersWithTwoDots(i);
+                dots[i].classList.add("active");
+            }
+            if (i === 1) {
+                swapMembersWithTwoDots(i);
+                dots[i].classList.add("active");
+            }
+        });
+    }
+    setInterval('swapMembersWithTwoDots(1)', 5000);
+    setInterval('swapMembersWithTwoDots(0)', 10000);
+
+}else if(document.documentElement.clientWidth <= 1000){
+
+} else if(window.matchMedia('(max-width: 699px)').matches){
+
+}
