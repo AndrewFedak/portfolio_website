@@ -346,9 +346,8 @@ main{
     margin: 40px 0;
 }
 .member{
-
     text-align: center;
-    margin: 0 30px;
+    margin: 10px 30px;
 }
 .member_image{
     display: block;
@@ -401,6 +400,7 @@ main{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    margin-right: 5px;
 }
 .active, .dot:hover{
     background-color: #717171;
@@ -430,8 +430,8 @@ main{
     padding: 100px 70px;
 }
 .blog_info p{
-    width: 100%;
-
+    width: 60%;
+    margin: 30px auto;
 }
 .blog_block{
      display:grid;
@@ -547,7 +547,7 @@ main{
     width: 55px;
     height: 60px;
     cursor:pointer;
-    /*display: none;*/
+    display: block;
 }
 
 footer{

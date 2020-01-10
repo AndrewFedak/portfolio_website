@@ -4,6 +4,7 @@ let latestWorksButtons = document.querySelectorAll(".latest_works_buttons button
     servicesButtons = document.querySelectorAll(".read_more"),
     memberBlock = document.querySelectorAll(".member"),
     dots = document.querySelectorAll(".dot"),
+    sliderDots = document.querySelector(".slider_dots"),
     scrollTop = document.querySelector(".top_arrow");
 
 
@@ -23,6 +24,8 @@ for(let i = 0; i < servicesRectangles.length; i++){
 
 
 for(let i = 0; i < latestWorksButtons.length; i++){
+    latestWorksButtons[0].classList.add('latest_works_buttons_click');
+    latestWorksButtons[0].style = "color:white";
     latestWorksButtons[i].addEventListener("click",function () {
         latestWorksButtons.forEach(function(button){
             if(button.classList.contains('latest_works_buttons_click')){
@@ -67,9 +70,7 @@ for(let i = 0; i < latestWorksButtons.length; i++){
 
 
 
-scrollTop.addEventListener("click", function () {
-    window.scrollTo(0,0);                                       //доробити
-});
+
 
 
 
@@ -92,10 +93,12 @@ scrollTop.addEventListener("click", function () {
 
 
 
-
-function swapMembersWithTwoDots(i) {
+function displayNoneMembers() {
     for (let m = 0; m < memberBlock.length; m++)
         memberBlock[m].style = "display:none;";
+}
+function swapMembersWithTwoDots(i) {
+    displayNoneMembers();
     if (i === 0) {
         for (let k = 0; k < 3; k++)
             memberBlock[k].style = "display:block";
@@ -111,36 +114,106 @@ function swapMembersWithTwoDots(i) {
         dots[i].classList.add("active");
     }
 }
-
-
-
-if (document.documentElement.clientWidth > 1000) {
-    for (let j = 0; j < memberBlock.length; j++) {
-        memberBlock[j].style = "display:none;";
+function swapMembersWithThreeDots(i){
+    displayNoneMembers();
+    if (i === 0) {
+        for (let k = 0; k < 2; k++)
+            memberBlock[k].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[i].classList.add("active");
     }
+    if (i === 1) {
+        for (let k = 2; k < 4; k++)
+            memberBlock[k].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[i].classList.add("active");
+    }
+    if (i === 2) {
+        for (let k = 4; k < 6; k++)
+            memberBlock[k].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[i].classList.add("active");
+    }
+}
+
+
+
+if (window.matchMedia('(min-width: 1000px)').matches) {
+    for(let i = 0; i < 2; i++) {
+        let plusDot = document.createElement("span");
+        plusDot.classList.add("dot");
+        sliderDots.appendChild(plusDot);
+    }
+    dots = document.querySelectorAll(".dot");
+    dots[0].classList.add("active");
+    displayNoneMembers();
     for (let k = 0; k < 3; k++) {
         memberBlock[k].style = "display:block";
     }
-    dots[0].classList.add("active");
     for (let i = 0; i < dots.length; i++) {
         dots[i].addEventListener("click", function () {
-            for (let m = 0; m < memberBlock.length; m++)
-                memberBlock[m].style = "display:none;";
-            if (i === 0) {
+            displayNoneMembers();
                 swapMembersWithTwoDots(i);
-                dots[i].classList.add("active");
-            }
-            if (i === 1) {
-                swapMembersWithTwoDots(i);
-                dots[i].classList.add("active");
-            }
         });
     }
     setInterval('swapMembersWithTwoDots(1)', 5000);
     setInterval('swapMembersWithTwoDots(0)', 10000);
 
-}else if(document.documentElement.clientWidth <= 1000){
-
-} else if(window.matchMedia('(max-width: 699px)').matches){
-
+}else if(document.documentElement.clientWidth < 1000 && document.documentElement.clientWidth > 750){
+    for(let i = 0; i < 3; i++) {
+        let plusDot = document.createElement("span");
+        plusDot.classList.add("dot");
+        sliderDots.appendChild(plusDot);
+    }
+    dots = document.querySelectorAll(".dot");
+    dots[0].classList.add("active");
+    displayNoneMembers();
+    for (let k = 0; k < 2; k++) {
+        memberBlock[k].style = "display:block";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function () {
+            displayNoneMembers();
+            swapMembersWithThreeDots(i);
+        });
+    }
+} else if(document.documentElement.clientWidth <= 750){
+    let num = 0;
+    for(let i = 0; i < 6; i++) {
+        let plusDot = document.createElement("span");
+        plusDot.classList.add("dot");
+        sliderDots.appendChild(plusDot);
+    }
+    dots = document.querySelectorAll(".dot");
+    dots[0].classList.add("active");
+    displayNoneMembers();
+    memberBlock[0].style = "display:block";
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener("click", function () {
+            displayNoneMembers();
+            memberBlock[i].style = "display:block";
+            for (let i = 0; i < dots.length; i++)
+                dots[i].classList.remove("active");
+            dots[i].classList.add("active");
+        });
+    }
+    setInterval(function () {
+        displayNoneMembers();
+        memberBlock[num].style = "display:block";
+        for (let i = 0; i < dots.length; i++)
+            dots[i].classList.remove("active");
+        dots[num].classList.add("active");
+        num++;
+        if(num > 5){
+            num = 0;
+        }
+    }, 4000);
 }
+
+
+scrollTop.addEventListener("click", function () {
+    window.scrollTo(0,0);//доробити
+});
