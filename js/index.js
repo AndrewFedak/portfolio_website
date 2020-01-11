@@ -217,3 +217,10 @@ if (window.matchMedia('(min-width: 1000px)').matches) {
 scrollTop.addEventListener("click", function () {
     window.scrollTo(0,0);//доробити
 });
+window.addEventListener("scroll", function () {
+    if(window.pageYOffset > 800){
+        scrollTop.style = "display: block; transition: 0.5s";
+    } else{
+        scrollTop.style = "display: none; transition: 0.5s";
+    }
+});

@@ -542,12 +542,12 @@ main{
 
 .top_arrow{
     position: fixed;
-    right: 7px;
+    right: 10px;
     bottom: 60px;
-    width: 55px;
+    width: 60px;
     height: 60px;
     cursor:pointer;
-    display: block;
+    display: none;
 }
 
 footer{
