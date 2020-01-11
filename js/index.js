@@ -70,29 +70,6 @@ for(let i = 0; i < latestWorksButtons.length; i++){
 
 
 
-
-
-
-
-
-
-// function swapMember(n){
-//     for(let i = 0; i < dots.length; i++)
-//         dots[i].classList.remove("active");
-//     if(n === 1){
-//
-//         dots[0].classList.add("active");
-//     }
-//     if(n === 2){
-//
-//         dots[1].classList.add("active");
-//     }
-// }
-// setInterval('swapMember(2)', 5000);
-// setInterval('swapMember(1)', 10000);
-
-
-
 function displayNoneMembers() {
     for (let m = 0; m < memberBlock.length; m++)
         memberBlock[m].style = "display:none;";
@@ -141,7 +118,9 @@ function swapMembersWithThreeDots(i){
 
 
 
-if (window.matchMedia('(min-width: 1000px)').matches) {
+
+
+if (window.matchMedia('(min-width: 1200px)').matches) {
     for(let i = 0; i < 2; i++) {
         let plusDot = document.createElement("span");
         plusDot.classList.add("dot");
@@ -155,14 +134,13 @@ if (window.matchMedia('(min-width: 1000px)').matches) {
     }
     for (let i = 0; i < dots.length; i++) {
         dots[i].addEventListener("click", function () {
-            displayNoneMembers();
                 swapMembersWithTwoDots(i);
         });
     }
     setInterval('swapMembersWithTwoDots(1)', 5000);
     setInterval('swapMembersWithTwoDots(0)', 10000);
 
-}else if(document.documentElement.clientWidth < 1000 && document.documentElement.clientWidth > 750){
+}else if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth > 800){
     for(let i = 0; i < 3; i++) {
         let plusDot = document.createElement("span");
         plusDot.classList.add("dot");
@@ -176,11 +154,10 @@ if (window.matchMedia('(min-width: 1000px)').matches) {
     }
     for (let i = 0; i < dots.length; i++) {
         dots[i].addEventListener("click", function () {
-            displayNoneMembers();
             swapMembersWithThreeDots(i);
         });
     }
-} else if(document.documentElement.clientWidth <= 750){
+} else if(document.documentElement.clientWidth <= 800){
     let num = 0;
     for(let i = 0; i < 6; i++) {
         let plusDot = document.createElement("span");
@@ -214,13 +191,82 @@ if (window.matchMedia('(min-width: 1000px)').matches) {
 }
 
 
+
+
+
+function forRectangles(dots, showRectangles) {
+    let priceRectangles = document.querySelectorAll(".price_list a"),
+        pricePlan =document.querySelector(".pricing_plan");
+    priceRectangles.forEach(function (rectangle) {
+        rectangle.style = "display:none";
+    });
+    for(let k = 0; k < showRectangles; k++)
+        priceRectangles[k].style = "display: block";
+    for(let i = 0; i < dots; i++) {
+        let plusDot = document.createElement("span");
+        plusDot.classList.add("dot");
+        pricePlan.appendChild(plusDot);
+    }
+    dots = document.querySelectorAll(".dot");
+    dots[0].classList.add("active");
+    for(let j = 0; j < dots.length; j++)
+        dots[j].style = "margin-top:20px; height: 25px; width: 25px";
+}
+
+
+
+if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth >= 750){
+    forRectangles(3, 2);
+    let priceRectangles = document.querySelectorAll(".price_list a"),
+        dots = document.querySelectorAll(".dot");
+    for(let j = 0; j < dots.length; j++){
+        dots[j].addEventListener("click",function () {
+            for(let k = 0; k < priceRectangles.length; k++){
+                priceRectangles[k].style = "display:none";
+                dots[k].classList.remove("active");
+            }
+            dots[j].classList.add("active");
+            if(j+1 >= 3){
+                priceRectangles[0].style = "display:block; background: url(img/price_rectangle/ultimates.jpg)";
+                priceRectangles[priceRectangles.length-1].style = "display:block; background: url(img/price_rectangle/free.jpg)";
+            } else {
+                priceRectangles[j].style = "display:block";
+                priceRectangles[j + 1].style = "display:block";
+            }
+        });
+    }
+} else if (document.documentElement.clientWidth <= 750){
+    forRectangles(3, 1);
+    let priceRectangles = document.querySelectorAll(".price_list a"),
+        dots = document.querySelectorAll(".dot");
+    for(let j = 0; j < dots.length; j++){
+        dots[j].addEventListener("click",function () {
+            for(let k = 0; k < priceRectangles.length; k++){
+                priceRectangles[k].style = "display:none";
+                dots[k].classList.remove("active");
+            }
+            priceRectangles[j].style = "display:block";
+            dots[j].classList.add("active");
+        });
+    }
+}
+
+
+
 scrollTop.addEventListener("click", function () {
     window.scrollTo(0,0);//доробити
 });
 window.addEventListener("scroll", function () {
     if(window.pageYOffset > 800){
-        scrollTop.style = "display: block; transition: 0.5s";
+        scrollTop.style = "display: block";
     } else{
-        scrollTop.style = "display: none; transition: 0.5s";
+        scrollTop.style = "display: none";
     }
 });
+
+
+
+
+
+
+
