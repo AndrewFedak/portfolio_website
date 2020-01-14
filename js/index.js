@@ -5,7 +5,9 @@ let latestWorksButtons = document.querySelectorAll(".latest_works_buttons button
     memberBlock = document.querySelectorAll(".member"),
     dots = document.querySelectorAll(".dot"),
     sliderDots = document.querySelector(".slider_dots"),
-    scrollTop = document.querySelector(".top_arrow");
+    scrollTop = document.querySelector(".top_arrow"),
+    burgerIcon = document.querySelector(".burger"),
+    burgerTags = document.querySelector(".burger_tags");
 
 
 
@@ -215,7 +217,7 @@ function forRectangles(dots, showRectangles) {
 
 
 
-if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth >= 750){
+if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth > 800){
     forRectangles(3, 2);
     let priceRectangles = document.querySelectorAll(".price_list a"),
         dots = document.querySelectorAll(".dot");
@@ -235,7 +237,7 @@ if(document.documentElement.clientWidth < 1200 && document.documentElement.clien
             }
         });
     }
-} else if (document.documentElement.clientWidth <= 750){
+} else if (document.documentElement.clientWidth <= 800){
     forRectangles(3, 1);
     let priceRectangles = document.querySelectorAll(".price_list a"),
         dots = document.querySelectorAll(".dot");
@@ -254,6 +256,7 @@ if(document.documentElement.clientWidth < 1200 && document.documentElement.clien
 
 
 scrollTop.addEventListener("click", function () {
+
     window.scrollTo(0,0);//доробити
 });
 window.addEventListener("scroll", function () {
@@ -264,7 +267,13 @@ window.addEventListener("scroll", function () {
     }
 });
 
-
+burgerIcon.addEventListener("click", function () {
+    if(burgerTags.classList.contains("none")){
+        burgerTags.classList.remove("none");
+    } else{
+        burgerTags.classList.add("none");
+    }
+});
 
 
 
