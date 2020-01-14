@@ -7,7 +7,8 @@ let latestWorksButtons = document.querySelectorAll(".latest_works_buttons button
     sliderDots = document.querySelector(".slider_dots"),
     scrollTop = document.querySelector(".top_arrow"),
     burgerIcon = document.querySelector(".burger"),
-    burgerTags = document.querySelector(".burger_tags");
+    burgerTags = document.querySelector(".burger_tags"),
+    burgerTagsTag = document.querySelectorAll(".burger_tags a");
 
 
 
@@ -271,11 +272,15 @@ burgerIcon.addEventListener("click", function () {
     if(burgerTags.classList.contains("none")){
         burgerTags.classList.remove("none");
     } else{
-        burgerTags.classList.add("none");
+    burgerTags.classList.add("none");
     }
 });
 
-
+burgerTagsTag.forEach(function(tag){
+    tag.addEventListener("click", function () {
+        burgerTags.classList.add("none");
+    })
+});
 
 
 
