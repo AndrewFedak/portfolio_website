@@ -129,7 +129,7 @@ if (window.matchMedia('(min-width: 1200px)').matches) {
         plusDot.classList.add("dot");
         sliderDots.appendChild(plusDot);
     }
-    dots = document.querySelectorAll(".dot");
+    dots = document.querySelectorAll(".slider_dots .dot");
     dots[0].classList.add("active");
     displayNoneMembers();
     for (let k = 0; k < 3; k++) {
@@ -149,7 +149,7 @@ if (window.matchMedia('(min-width: 1200px)').matches) {
         plusDot.classList.add("dot");
         sliderDots.appendChild(plusDot);
     }
-    dots = document.querySelectorAll(".dot");
+    dots = document.querySelectorAll(".slider_dots .dot");
     dots[0].classList.add("active");
     displayNoneMembers();
     for (let k = 0; k < 2; k++) {
@@ -167,7 +167,7 @@ if (window.matchMedia('(min-width: 1200px)').matches) {
         plusDot.classList.add("dot");
         sliderDots.appendChild(plusDot);
     }
-    dots = document.querySelectorAll(".dot");
+    dots = document.querySelectorAll(".slider_dots .dot");
     dots[0].classList.add("active");
     displayNoneMembers();
     memberBlock[0].style = "display:block";
@@ -210,7 +210,7 @@ function forRectangles(dots, showRectangles) {
         plusDot.classList.add("dot");
         pricePlan.appendChild(plusDot);
     }
-    dots = document.querySelectorAll(".dot");
+    dots = document.querySelectorAll(".pricing_plan .dot");
     dots[0].classList.add("active");
     for(let j = 0; j < dots.length; j++)
         dots[j].style = "margin-top:20px; height: 25px; width: 25px";
@@ -221,7 +221,7 @@ function forRectangles(dots, showRectangles) {
 if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth > 800){
     forRectangles(3, 2);
     let priceRectangles = document.querySelectorAll(".price_list a"),
-        dots = document.querySelectorAll(".dot");
+        dots = document.querySelectorAll(".pricing_plan .dot");
     for(let j = 0; j < dots.length; j++){
         dots[j].addEventListener("click",function () {
             for(let k = 0; k < priceRectangles.length; k++){
@@ -241,7 +241,7 @@ if(document.documentElement.clientWidth < 1200 && document.documentElement.clien
 } else if (document.documentElement.clientWidth <= 800){
     forRectangles(3, 1);
     let priceRectangles = document.querySelectorAll(".price_list a"),
-        dots = document.querySelectorAll(".dot");
+        dots = document.querySelectorAll(".pricing_plan .dot");
     for(let j = 0; j < dots.length; j++){
         dots[j].addEventListener("click",function () {
             for(let k = 0; k < priceRectangles.length; k++){
